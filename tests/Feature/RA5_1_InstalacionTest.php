@@ -9,11 +9,11 @@ use Tests\TestCase;
 class RA5_1_InstalacionTest extends TestCase
 {
     // Repositorio base del curso: "upstream" apunta a él; "origin", a tu fork.
-    private const REPO_BASE = '2DAW-CarlosIII/marcapersonalfp2627';
+    private const REPO_BASE = '2DAW-CarlosIII/eportfolio_g4';
 
     // Desde "workspace" se usa el nombre del servicio ("nginx"); la cabecera Host elige el sitio.
     private const NGINX = 'http://nginx/';
-    private const SITIO = 'marcapersonalfp.test';
+    private const SITIO = 'eportfolio_g4.test';
 
     /** URL del remoto indicado, leída de .git/config, o cadena vacía si no existe. */
     private function urlRemoto(string $remoto): string
