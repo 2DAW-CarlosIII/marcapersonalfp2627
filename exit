@@ -1,0 +1,40 @@
+[33mcommit 1bc6e890b7b2fefdacbcd8a2d7fa131e1471905a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31mupstream/main[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 51d98b1 8917df2
+Author: Alberto Sierra <alberto.sierra@murciaeduca.es>
+Date:   Thu Nov 5 22:17:24 2026 +0100
+
+    Soluciona los ejercicios de 5.1
+    
+    Soluciona los ejercicios de 5.1
+
+[33mcommit 51d98b1b00fe1077e6384ba58127399c774d5210[m
+Author: Alberto Sierra <alberto.sierra@murciaeduca.es>
+Date:   Thu Nov 5 22:02:32 2026 +0100
+
+    Enhance test execution with logging and error checks
+    
+    Added error handling and output logging for tests in the workflow.
+
+[33mcommit d7cb72b107e73f03fe8be3d830529bf4ec609fe3[m
+Author: Alberto Sierra <alberto.sierra@murciaeduca.es>
+Date:   Thu Nov 5 21:40:49 2026 +0100
+
+    Update GitHub Actions workflow for pull requests
+
+[33mcommit 8d593fafc007817fd0286507ca5c393c95711636[m
+Author: Alberto Sierra <alberto.sierra@murciaeduca.es>
+Date:   Thu Nov 5 19:38:18 2026 +0100
+
+    Correcciones automáticas
+
+[33mcommit 8917df299fb1ce3a1769f796d970d74e31529a39[m
+Author: Gabriel Iborra <2866037@alu.murciaeduca.es>
+Date:   Thu Nov 5 08:18:00 2026 +0100
+
+    Soluciona los ejercicios de 5.1
+
+[33mcommit b6420d5882a812eaa2fabe94be051cbf155d61ad[m
+Author: Alberto Sierra <alberto.sierra@murciaeduca.es>
+Date:   Mon Nov 2 10:50:51 2026 +0100
+
+    Esqueleto de Laravel 13
