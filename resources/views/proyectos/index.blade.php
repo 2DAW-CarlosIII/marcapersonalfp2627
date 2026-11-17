@@ -1,4 +1,4 @@
-<x-layout :titulo="Listado de Proyectos">
+<x-layout :titulo="'Listado de Proyectos'">
 @forelse ($proyectos as $id => $proyecto)
     <li>{{ $proyecto['nombre'] }}</li>
 @empty
