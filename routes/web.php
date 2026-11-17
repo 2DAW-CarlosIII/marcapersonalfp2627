@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'Pantalla principal';
+    return view('home', ['centro' => config('marcapersonalfp.centro')]);
 });
-
 
 Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
      return '¡Hola, ' . e($nombre) . '!';
@@ -13,25 +12,26 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
 
 
  Route::prefix('proyectos')->name('proyectos.')->group(function () {
-    Route::get('/', function () { 
-        return 'Listado proyectos '; 
+    Route::get('/', function () {
+        return view('proyectos.index', ['proyectos' => config('marcapersonalfp.proyectos')]); 
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
-        return 'Vista detalle proyecto ' . $id; 
+        return view('proyectos.show', $id); 
         })->name('show')->whereNumber('id');
 
     Route::get('create', function () { 
-        return 'Añadir proyecto';
+        return view('proyectos.create');;
         })->name('create');
 
      Route::get('edit/{id}', function ($id) { 
-        return 'Modificar proyecto ' . $id; 
+        return view('proyectos.edit', $id);
         })->name('edit')->whereNumber('id');
 });
 
 Route::get('perfil/{id?}', function ($id = null){
-     return 'Visualizar el currículo ' . ($id ? 'de ' . $id : 'propio');
+    return view('perfil', $id ? 'de ' . $id : 'propio'); 
+    //return 'Visualizar el currículo ' . ($id ? 'de ' . $id : 'propio');
  })->whereNumber('id')->name('perfil');
 
  Route::get('centro', function () {
