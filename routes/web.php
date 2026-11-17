@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'Pantalla principal';
+    return view('home',['centro'=>config('marcapersonalfp.centro')]);
 });
 
 
@@ -11,10 +11,11 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
      return '¡Hola, ' . e($nombre) . '!';
  });
 
+ 
 
  Route::prefix('proyectos')->name('proyectos.')->group(function () {
-    Route::get('/', function () { 
-        return 'Listado proyectos '; 
+    Route::get('/', function () {
+        return view('proyectos.index',['proyectos'=> config('marcapersonalfp.proyectos')]);
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
@@ -37,3 +38,5 @@ Route::get('perfil/{id?}', function ($id = null){
  Route::get('centro', function () {
     return ['centro' => config('marcapersonalfp.centro')];
  })->name('centro');
+
+ 
