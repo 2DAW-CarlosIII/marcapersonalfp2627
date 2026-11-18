@@ -18,15 +18,15 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
-        return 'Vista detalle proyecto ' . $id; 
+        return view('proyectos.show', $id); 
         })->name('show')->whereNumber('id');
 
     Route::get('create', function () { 
-        return 'Añadir proyecto';
+        return view('proyectos.create');
         })->name('create');
 
      Route::get('edit/{id}', function ($id) { 
-        return 'Modificar proyecto ' . $id; 
+        return view('proyectos.edit', $id); 
         })->name('edit')->whereNumber('id');
 });
 
