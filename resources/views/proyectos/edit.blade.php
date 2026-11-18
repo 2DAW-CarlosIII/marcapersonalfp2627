@@ -1,2 +1,2 @@
-<x-layout :titulo="'Vista detalle proyecto ' . $id">
+<x-layout :titulo="'Modificar proyecto ' . $id">
 </x-layout>
