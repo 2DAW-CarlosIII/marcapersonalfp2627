@@ -19,20 +19,23 @@ Route::prefix('proyectos')->name('proyectos.')->group(function () {
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
-        return 'Vista detalle proyecto ' . $id; 
+        return view('proyectos.show', [
+            'proyecto' => config('marcapersonalfp.proyectos')[$id] ?? null,
+            'id' => $id]); 
         })->name('show')->whereNumber('id');
 
     Route::get('create', function () { 
-        return 'Añadir proyecto';
+        return view('proyectos.create');
         })->name('create');
 
     Route::get('edit/{id}', function ($id) { 
-        return 'Modificar proyecto ' . $id; 
+        return view('proyectos.edit', ['proyecto' => config('marcapersonalfp.proyectos')[$id] ?? null
+        , 'id' => $id]); 
         })->name('edit')->whereNumber('id');
 });
 
 Route::get('perfil/{id?}', function ($id = null){
-     return 'Visualizar el currículo ' . ($id ? 'de ' . $id : 'propio');
+     return view('perfil', ['id' => $id]);
 })->whereNumber('id')->name('perfil');
 
 Route::get('centro', function () {
