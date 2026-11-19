@@ -1,5 +1,7 @@
-<x-layout>
-    <x-slot:title>Detalle del proyecto {{ $id }}</x-slot:title>
-
-    <p>Mostrando información detallada del proyecto con ID: <strong>{{ $id }}</strong>.</p>
+<x-layout :titulo="'Vista detalle proyecto '">
+@isset($proyecto)
+    <ul class="grid gap-4 sm:grid-cols-2">
+    <x-tarjeta-proyecto :proyecto="$proyecto" :id="$id" />
+</ul>
+@endisset
 </x-layout>

@@ -5,4 +5,5 @@
 @empty
     <li>Todavía no hay proyectos.</li>
 @endforelse
+</ul>
 </x-layout>
