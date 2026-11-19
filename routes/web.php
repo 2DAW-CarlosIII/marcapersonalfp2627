@@ -26,12 +26,12 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
         })->name('create');
 
      Route::get('edit/{id}', function ($id) { 
-        return 'Modificar proyecto ' . $id; 
+        return view('proyectos.edit', ["id" => $id]);
         })->name('edit')->whereNumber('id');
 });
 
 Route::get('perfil/{id?}', function ($id = null){
-     return 'Visualizar el currículo ' . ($id ? 'de ' . $id : 'propio');
+     return view('perfil', ["id" => $id]);
  })->whereNumber('id')->name('perfil');
 
  Route::get('centro', function () {
