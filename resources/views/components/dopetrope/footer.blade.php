@@ -45,7 +45,7 @@
 					the <a href="http://html5up.net/license/" class="text-dope-footer-link underline hover:no-underline">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
 				</p>
 				<footer class="mt-9">
-                    <x-dopetrope.boton href="#">Find out more</x-dopetrope.boton>
+                    <x-dopetrope.boton>Find out more</x-dopetrope.boton>
 				</footer>
 			</section>
 

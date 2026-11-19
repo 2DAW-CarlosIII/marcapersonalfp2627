@@ -17,7 +17,7 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
-        return view('proyectos.show', ['id' => $id]); 
+        return view('proyectos.show', ['id' => $id, 'proyecto' => config('marcapersonalfp.proyectos')[$id] ?? null]); 
         })->name('show')->whereNumber('id');
 
     Route::get('create', function () { 
@@ -25,7 +25,7 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
         })->name('create');
 
      Route::get('edit/{id}', function ($id) { 
-        return view('proyectos.edit', ['id' => $id]);
+        return view('proyectos.edit', ['id' => $id, 'proyecto' => config('marcapersonalfp.proyectos')[$id] ?? null]);
         })->name('edit')->whereNumber('id');
 });
 

@@ -9,6 +9,11 @@
         'Etiam nisl consequat',
         'Dolore nisl feugiat',
     ];
+
+    $blog = [
+        'Las bondades del desarrollo servidor',
+        'No hay nada mejro que Laravel y blade'
+    ];
 @endphp
 
 <main id="main" class="bg-dope-light py-16">
@@ -41,39 +46,17 @@
         {{-- Blog --}}
         <x-dopetrope.seccion titulo="The Blog">
             <div class="grid gap-12 lg:grid-cols-2">
+                @foreach ($blog as $titular)
+                    <x-dopetrope.box :titulo="$titular" subtitulo="Posted 45 minutes ago" :imagen="'https://picsum.photos/seed/dopetrope-' . $loop->iteration . '/800/450'">
+                        <p>Posted 45 minutes ago</p>
 
-                <x-dopetrope.box titulo="Título de la primera caja" subtitulo="Posted 45 minutes ago" imagen="https://picsum.photos/seed/dopetrope-blog-1/800/450">
-                    <p>Texto de la primera caja</p>
-                    <x-slot:footer>
-                        <li>
-                            <x-dopetrope.boton>
-                                <x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading
-                            </x-dopetrope.boton>
-                        </li>
-                        <li>
-                            <x-dopetrope.boton alt>
-                                <x-dopetrope.icono nombre="comentario" class="size-4" /> 33 comments
-                            </x-dopetrope.boton>
-                        </li>
-                    </x-slot:footer>
-                </x-dopetrope.box>
-
-                <x-dopetrope.box titulo="Título de la segunda caja" subtitulo="Posted 45 minutes ago" imagen="https://picsum.photos/seed/dopetrope-blog-1/800/450">
-                    <p>Texto de la segunda caja</p>
-                    <x-slot:footer>
-                        <li>
-                            <x-dopetrope.boton>
-                                <x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading
-                            </x-dopetrope.boton>
-                        </li>
-                        <li>
-                            <x-dopetrope.boton alt>
-                                <x-dopetrope.icono nombre="comentario" class="size-4" /> 30 comments
-                            </x-dopetrope.boton>
-                        </li>
-                    </x-slot:footer>
-                </x-dopetrope.box>
-
+                        <x-slot:footer>
+                            <li><x-dopetrope.boton>
+                                <x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading</x-dopetrope.boton>
+                            </li>
+                        </x-slot:footer>
+                    </x-dopetrope.box>
+                @endforeach
             </div>
         </x-dopetrope.seccion>
 
