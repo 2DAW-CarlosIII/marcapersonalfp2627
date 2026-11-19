@@ -18,7 +18,10 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
-        return view('proyectos.show', ['id' => $id]);
+        return view('proyectos.show', [ 
+            'proyecto' => config('marcapersonalfp.proyectos')[$id] ?? null,
+            'id' => $id
+            ]);
         })->name('show')->whereNumber('id');
 
     Route::get('create', function () { 
