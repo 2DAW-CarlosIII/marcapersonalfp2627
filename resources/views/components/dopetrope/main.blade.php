@@ -44,11 +44,10 @@
 
         {{-- Blog --}}
         <x-dopetrope.seccion titulo="The Blog">
-         <div class="grid gap-12 lg:grid-cols-2">
+        <div class="grid gap-12 lg:grid-cols-2">
                 @foreach ($blog as $titular)
                     <x-dopetrope.box :titulo="$titular" :imagen="'https://picsum.photos/seed/dopetrope-blog-' . $loop->iteration . '/800/450'">
                         <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-
                         <x-slot:footer>
                             <li>
                                 <x-dopetrope.boton>
@@ -59,9 +58,7 @@
                     </x-dopetrope.box>
                 @endforeach
             </div>   
-
-		</div>
+		</x-dopetrope.seccion>
 	</section>
-
     </div>
 </main>
