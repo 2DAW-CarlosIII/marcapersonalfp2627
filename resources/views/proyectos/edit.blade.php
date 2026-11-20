@@ -1,5 +1,4 @@
-<x-layout>
-    <x-slot:title>Modificar proyecto {{ $id }}</x-slot:title>
-
-    <p>Formulario para editar el proyecto con ID: <strong>{{ $id }}</strong>.</p>
+<x-layout :titulo="'Modificar proyecto ' . $id">
+    <h2>Modificar proyecto {{ $id }}</h2>
+    {{-- Resto del contenido o formulario de edición --}}
 </x-layout>

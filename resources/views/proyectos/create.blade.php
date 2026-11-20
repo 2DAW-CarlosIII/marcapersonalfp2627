@@ -1,5 +1,4 @@
-<x-layout>
-    <x-slot:title>Añadir proyecto</x-slot:title>
-
-    <p>Formulario para crear un nuevo proyecto.</p>
+<x-layout titulo="Añadir proyecto">
+    <h2>Añadir proyecto</h2>
+    {{-- Resto del contenido o formulario de creación --}}
 </x-layout>
