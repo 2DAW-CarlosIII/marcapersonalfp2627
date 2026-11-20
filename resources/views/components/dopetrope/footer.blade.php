@@ -1,3 +1,34 @@
+@php
+	$fechas = [
+		['dia' => "27", "titulo" => "Lorem ipsum dolor sit amet"],
+		['dia' => "28", "titulo" => "Sed et blandit consequat"],
+		['dia' => "29", "titulo" => "Adipiscing feugiat phasellus"],
+		['dia' => "30", "titulo" => "Hendrerit tortor vitae"],
+	];
+
+	$listaEnlaces = [
+		"Lorem ipsum dolor sit amet sit veroeros",
+		"Sed et blandit consequat sed tlorem blandit",
+	];
+
+	$enlaces = [
+		"Lorem ipsum dolor sit amet sit veroeros",
+		"Sed et blandit consequat sed tlorem blandit",
+		"Adipiscing feugiat phasellus sed tempus",
+		"Hendrerit tortor vitae mattis tempor sapien",
+		"Sem feugiat sapien id suscipit magna felis nec",
+		"Elit class aptent taciti sociosqu ad litora",
+	];
+
+	$iconos = [
+		"facebook",
+		"twitter",
+		"dribbble",
+		"tumblr",
+		"linkedin",
+	];
+@endphp
+
 <footer id="footer" class="py-16 text-dope-footer">
 		<div class="mx-auto grid max-w-[1200px] gap-x-12 gap-y-16 px-6 lg:grid-cols-3">
 
@@ -6,31 +37,13 @@
 					<h2 class="text-[1.75em] text-white">Blandit nisl adipiscing</h2>
 				</header>
 				<ul>
-					<li class="group relative border-t border-white/5 py-5 pl-[6.75em] first:border-t-0 first:pt-0">
-						<span class="absolute top-5 left-0 block h-[3.5em] rounded-l-[5px] bg-dope-red pt-2 pr-3 pl-4 text-center leading-none text-white group-first:top-0 after:absolute after:-right-[1.2em] after:bottom-0 after:border-y-[1.8em] after:border-l-[1.25em] after:border-y-transparent after:border-l-dope-red">Jan <strong class="block pt-[0.15em] text-[1.75em] font-normal">27</strong></span>
-						<h3 class="text-xl"><a href="#" class="text-white">Lorem dolor sit amet veroeros</a></h3>
-						<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
-					</li>
-					<li class="group relative border-t border-white/5 py-5 pl-[6.75em] first:border-t-0 first:pt-0">
-						<span class="absolute top-5 left-0 block h-[3.5em] rounded-l-[5px] bg-dope-red pt-2 pr-3 pl-4 text-center leading-none text-white group-first:top-0 after:absolute after:-right-[1.2em] after:bottom-0 after:border-y-[1.8em] after:border-l-[1.25em] after:border-y-transparent after:border-l-dope-red">Jan <strong class="block pt-[0.15em] text-[1.75em] font-normal">23</strong></span>
-						<h3 class="text-xl"><a href="#" class="text-white">Ipsum sed blandit nisl consequat</a></h3>
-						<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
-					</li>
-					<li class="group relative border-t border-white/5 py-5 pl-[6.75em] first:border-t-0 first:pt-0">
-						<span class="absolute top-5 left-0 block h-[3.5em] rounded-l-[5px] bg-dope-red pt-2 pr-3 pl-4 text-center leading-none text-white group-first:top-0 after:absolute after:-right-[1.2em] after:bottom-0 after:border-y-[1.8em] after:border-l-[1.25em] after:border-y-transparent after:border-l-dope-red">Jan <strong class="block pt-[0.15em] text-[1.75em] font-normal">15</strong></span>
-						<h3 class="text-xl"><a href="#" class="text-white">Magna tempus lorem feugiat</a></h3>
-						<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
-					</li>
-					<li class="group relative border-t border-white/5 py-5 pl-[6.75em] first:border-t-0 first:pt-0">
-						<span class="absolute top-5 left-0 block h-[3.5em] rounded-l-[5px] bg-dope-red pt-2 pr-3 pl-4 text-center leading-none text-white group-first:top-0 after:absolute after:-right-[1.2em] after:bottom-0 after:border-y-[1.8em] after:border-l-[1.25em] after:border-y-transparent after:border-l-dope-red">Jan <strong class="block pt-[0.15em] text-[1.75em] font-normal">12</strong></span>
-						<h3 class="text-xl"><a href="#" class="text-white">Dolore tempus ipsum feugiat nulla</a></h3>
-						<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
-					</li>
-					<li class="group relative border-t border-white/5 py-5 pl-[6.75em] first:border-t-0 first:pt-0">
-						<span class="absolute top-5 left-0 block h-[3.5em] rounded-l-[5px] bg-dope-red pt-2 pr-3 pl-4 text-center leading-none text-white group-first:top-0 after:absolute after:-right-[1.2em] after:bottom-0 after:border-y-[1.8em] after:border-l-[1.25em] after:border-y-transparent after:border-l-dope-red">Jan <strong class="block pt-[0.15em] text-[1.75em] font-normal">10</strong></span>
-						<h3 class="text-xl"><a href="#" class="text-white">Blandit tempus aliquam?</a></h3>
-						<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
-					</li>
+					@foreach ($fechas as $fecha)
+						<li class="group relative border-t border-white/5 py-5 pl-[6.75em] first:border-t-0 first:pt-0">
+							<span class="absolute top-5 left-0 block h-[3.5em] rounded-l-[5px] bg-dope-red pt-2 pr-3 pl-4 text-center leading-none text-white group-first:top-0 after:absolute after:-right-[1.2em] after:bottom-0 after:border-y-[1.8em] after:border-l-[1.25em] after:border-y-transparent after:border-l-dope-red">Jan <strong class="block pt-[0.15em] text-[1.75em] font-normal">{{ $fecha['dia'] }}</strong></span>
+							<h3 class="text-xl"><a href="#" class="text-white">{{ $fecha['titulo'] }}</a></h3>
+							<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
+						</li>
+					@endforeach
 				</ul>
 			</section>
 
@@ -49,44 +62,31 @@
 				</footer>
 			</section>
 
-			<section>
-				<header class="mb-12">
-					<h2 class="text-[1.75em] text-white">Tempus consequat</h2>
-				</header>
-				<ul>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Lorem ipsum dolor sit amet sit veroeros</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Sed et blandit consequat sed tlorem blandit</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Adipiscing feugiat phasellus sed tempus</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Hendrerit tortor vitae mattis tempor sapien</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Sem feugiat sapien id suscipit magna felis nec</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Elit class aptent taciti sociosqu ad litora</a></li>
-				</ul>
-			</section>
-
-			<section>
-				<header class="mb-12">
-					<h2 class="text-[1.75em] text-white">Ipsum et phasellus</h2>
-				</header>
-				<ul>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Lorem ipsum dolor sit amet sit veroeros</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Sed et blandit consequat sed tlorem blandit</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Adipiscing feugiat phasellus sed tempus</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Hendrerit tortor vitae mattis tempor sapien</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Sem feugiat sapien id suscipit magna felis nec</a></li>
-					<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">Elit class aptent taciti sociosqu ad litora</a></li>
-				</ul>
-			</section>
+			@foreach ($listaEnlaces as $listaEnlace)
+				<section>
+					<header class="mb-12">
+						<h2 class="text-[1.75em] text-white">{{ $listaEnlace }}</h2>
+					</header>
+					<ul>
+						@foreach ($enlaces as $enlace)
+							<li class="border-t border-white/5 py-4 first:border-t-0 first:pt-0"><a href="#" class="text-dope-footer-link hover:text-white">{{ $enlace }}</a></li>
+						@endforeach
+					</ul>
+				</section>
+			@endforeach
 
 			<section>
 				<header class="mb-12">
 					<h2 class="text-[1.75em] text-white">Vitae tempor lorem</h2>
 				</header>
 				<ul class="mb-12 flex flex-wrap gap-3">
-                    <x-dopetrope.icono nombre="facebook" class="mx-auto size-6" />
-                    <x-dopetrope.icono nombre="twitter" class="mx-auto size-6" />
-                    <x-dopetrope.icono nombre="dribbble" class="mx-auto size-6" />
-                    <x-dopetrope.icono nombre="tumblr" class="mx-auto size-6" />
-                    <x-dopetrope.icono nombre="linkedin" class="mx-auto size-6" />
+                    @foreach ($iconos as $icono)
+                        <li>
+							<a href="#" class="flex size-12 items-center justify-center rounded-[5px] bg-[#3c5a98] text-white transition-colors hover:bg-[#4c6aa8]">
+								<x-dopetrope.icono nombre="{{ $icono }}" class="mx-auto size-6" />
+							</a>
+						</li>
+                    @endforeach
 				</ul>
 				<ul>
 					<li class="group relative border-t border-white/5 py-5 pl-28 first:border-t-0 first:pt-0">
