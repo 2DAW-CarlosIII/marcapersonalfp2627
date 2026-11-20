@@ -28,6 +28,8 @@
             {{ $slot }}
         </section>
 
+        <x-dopetrope.intro />
+
         {{-- Portfolio --}}
         <x-dopetrope.seccion titulo="My Portfolio">
             <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
@@ -51,8 +53,13 @@
                         <p>Posted 45 minutes ago</p>
 
                         <x-slot:footer>
-                            <li><x-dopetrope.boton>
-                                <x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading</x-dopetrope.boton>
+                            <li>
+                                <x-dopetrope.boton>
+                                    <x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading
+                                </x-dopetrope.boton>
+                                <x-dopetrope.boton alt>
+                                    <x-dopetrope.icono nombre="comentario" class="size-4" /> 33 Commemts
+                                </x-dopetrope.boton>
                             </li>
                         </x-slot:footer>
                     </x-dopetrope.box>
