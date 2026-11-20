@@ -1,7 +1,5 @@
 <section id="header" class="border-b border-[#ccc] bg-white text-center">
 
-		<!-- Logo -->
-
 		<!-- Nav -->
 		<x-navbar />
 

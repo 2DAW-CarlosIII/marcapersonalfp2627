@@ -1,3 +1,2 @@
-<div>
-    <!-- Very little is needed to make a happy life. - Marcus Aurelius -->
-</div>
+<x-layout :titulo="'Vista detalle proyecto ' . $id">
+</x-layout>
