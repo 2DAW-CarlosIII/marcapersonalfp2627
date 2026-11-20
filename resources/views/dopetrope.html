@@ -1,0 +1,54 @@
+<!-- Header -->
+	<section id="header" class="border-b border-[#ccc] bg-white pt-16 text-center md:pt-[4.5em]">
+
+		<!-- Logo -->
+		<h1 class="mb-[1em] text-[2.5em] leading-none font-black tracking-[-0.035em] text-dope-dark">
+			<a href="index.html">Dopetrope</a>
+		</h1>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="flex flex-wrap justify-center gap-x-3 gap-y-4 px-6 italic">
+				<li>
+					<a href="index.html" class="inline-block rounded-[5px] bg-dope-red px-5 py-2.5 font-bold text-white">Home</a>
+				</li>
+				<li class="group/menu relative">
+					<a href="#" class="inline-block rounded-[5px] px-5 py-2.5 transition-colors group-hover/menu:bg-[#f3f3f3]">Dropdown</a>
+                    
+					<!-- Desplegable: solo CSS, con group-hover y group-focus-within (sin JavaScript) -->
+					<div class="invisible absolute top-full left-1/2 z-20 -translate-x-1/2 pt-5 opacity-0 transition group-focus-within/menu:visible group-focus-within/menu:opacity-100 group-hover/menu:visible group-hover/menu:opacity-100">
+						<ul class="relative min-w-52 rounded-[5px] bg-dope-dark/95 px-6 py-5 text-left whitespace-nowrap shadow-[0_8px_15px_0_rgb(0_0_0/0.5)] before:absolute before:-top-[9px] before:left-1/2 before:-ml-[10px] before:border-x-[10px] before:border-b-[10px] before:border-x-transparent before:border-b-dope-dark/95">
+							<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Lorem ipsum dolor</a></li>
+							<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Magna phasellus</a></li>
+							<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Etiam dolore nisl</a></li>
+							<li class="group/sub relative py-1">
+								<a href="#" class="text-[#aaa] transition-colors group-hover/sub:text-white">Phasellus consequat &rsaquo;</a>
+
+								<!-- Segundo nivel -->
+								<div class="invisible absolute top-0 left-full z-30 -mt-5 pl-8 opacity-0 transition group-focus-within/sub:visible group-focus-within/sub:opacity-100 group-hover/sub:visible group-hover/sub:opacity-100">
+									<ul class="min-w-52 rounded-[5px] bg-dope-dark/95 px-6 py-5 shadow-[0_8px_15px_0_rgb(0_0_0/0.5)]">
+										<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Magna phasellus</a></li>
+										<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Etiam dolore nisl</a></li>
+										<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Veroeros feugiat</a></li>
+										<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Nisl sed aliquam</a></li>
+										<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Dolore adipiscing</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="py-1"><a href="#" class="text-[#aaa] transition-colors hover:text-white">Veroeros feugiat</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="left-sidebar.html" class="inline-block rounded-[5px] px-5 py-2.5 transition-colors hover:bg-[#f3f3f3]">Left Sidebar</a></li>
+				<li><a href="right-sidebar.html" class="inline-block rounded-[5px] px-5 py-2.5 transition-colors hover:bg-[#f3f3f3]">Right Sidebar</a></li>
+				<li><a href="no-sidebar.html" class="inline-block rounded-[5px] px-5 py-2.5 transition-colors hover:bg-[#f3f3f3]">No Sidebar</a></li>
+			</ul>
+		</nav>
+
+		<!-- Banner -->
+		<section id="banner" class="mt-16 bg-[#cce8f4] bg-[url(https://picsum.photos/seed/dopetrope-banner/1600/700)] bg-cover bg-center px-4 py-20 md:py-32">
+			<header class="inline-block rounded-[5px] bg-dope-dark/95 px-8 py-8 md:px-20 md:py-10">
+				<h2 class="mb-[0.65em] text-3xl font-bold text-white md:text-5xl">Howdy. This is Dopetrope.</h2>
+				<p class="text-xl text-dope-red md:text-2xl">A responsive template by HTML5 UP</p>
+			</header>
+		</section>
