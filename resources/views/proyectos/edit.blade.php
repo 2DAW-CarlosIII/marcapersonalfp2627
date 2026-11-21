@@ -1,3 +1,3 @@
-<x-layout title="Modificar proyecto {{ $id }}">
-   
+<x-layout titulo="Modificar proyecto {{ $id }}">
+
 </x-layout>

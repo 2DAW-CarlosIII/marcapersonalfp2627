@@ -1,4 +1,4 @@
-<x-layout title="Añadir proyecto">
-    
+<x-layout titulo="Añadir proyecto">
+
 </x-layout>
 
