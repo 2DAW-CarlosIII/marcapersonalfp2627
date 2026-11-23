@@ -1,4 +1,4 @@
-	<!-- Intro -->
+		<!-- Intro -->
 		<section id="intro" class="mx-auto max-w-[1200px] px-6 pb-16">
 			<div class="grid md:grid-cols-3">
 				<section class="my-4 px-6 py-10 md:my-12">

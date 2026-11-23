@@ -1,6 +1,10 @@
-<x-layout titulo="Perfil">
-    @isset($id)
-    <p>Visualizar el currículo de {{ $id }}</p>
-    @endisset
-    <p>Visualizar el currículo propio </p>
+<x-layout :id="$id">
+    <h1>Perfil</h1>
+    <p>Visualizar el currículo
+        @isset($id)
+            de {{ $id }}
+        @else
+            propio
+        @endisset
+    </p>
 </x-layout>

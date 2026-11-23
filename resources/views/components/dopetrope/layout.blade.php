@@ -20,7 +20,7 @@
         {{ $slot }}
     </x-dopetrope.main>
 
-    <x-dopetrope.footer/>
+    <x-dopetrope.footer />
 
 </body>
 </html>

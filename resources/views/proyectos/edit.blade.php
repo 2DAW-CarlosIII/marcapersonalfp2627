@@ -1,5 +1,3 @@
-<x-layout titulo='Modificar proyecto {{ $id }}'>
-    @isset($proyecto)
-    <form>Formulario edicion.</form>
-    @endisset
+<x-layout :id="$id">
+    <h1>Modificar proyecto {{ $id }}</h1>
 </x-layout>
