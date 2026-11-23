@@ -9,7 +9,7 @@
         'Etiam nisl consequat',
         'Dolore nisl feugiat',
     ];
-    $blog =[
+    $blog=[
         'Las bondades del desarrollo servidor',
         'No hay nada mejor que laravel'
     ]
@@ -43,17 +43,21 @@
         </x-dopetrope.seccion>
 
         {{-- Blog --}}
-        <x-dopetrope.seccion titulo="The Blog">
+              <x-dopetrope.seccion titulo="The Blog">
             <div class="grid gap-12 lg:grid-cols-2">
                 @foreach ($blog as $titular)
                     <x-dopetrope.box :titulo="$titular" subtitulo="Posted 45 minutes ago" :imagen="'https://picsum.photos/seed/dopetrope-' . $loop->iteration . '/800/450'">
-
+                        
                         <x-slot:footer>
-                            <li><x-dopetrope.boton><x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading</x-dopetrope.boton></li>
+                            <li>
+                                <x-dopetrope.boton><x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading</x-dopetrope.boton>
+                                <x-dopetrope.boton alt><x-dopetrope.icono nombre="documento" class="size-4" /> 33 Comments</x-dopetrope.boton>
+                            </li>
                         </x-slot:footer>
                     </x-dopetrope.box>
                 @endforeach
             </div>
         </x-dopetrope.seccion>
+
     </div>
 </main>
