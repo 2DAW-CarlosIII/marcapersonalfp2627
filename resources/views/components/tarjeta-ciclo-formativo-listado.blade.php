@@ -8,7 +8,7 @@
             <div @class([
                 'font-bold',
                 'text-blue-700' => $cicloFormativo['grado'] === 'basico',
-                'text-yellow-700' => $cicloFormativo['grado'] === 'medio',
+                'text-yellow-400' => $cicloFormativo['grado'] === 'medio',
                 'text-orange-700' => $cicloFormativo['grado'] === 'superior',
             ])>{{ $cicloFormativo['grado'] }}</div>
 
