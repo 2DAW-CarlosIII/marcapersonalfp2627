@@ -4,7 +4,9 @@
         <img src="{{ asset('images/mp-logo.png') }}" alt="" class="h-40 object-contain">
 
         <div class="space-y-3 sm:col-span-2">
-            <h2 class="text-2xl font-semibold">{{ $proyecto['nombre'] }}</h2>
+            <h2 class="text-2xl font-semibold">
+                <a href="{{ route('proyectos.show', $id) }}"> {{ $proyecto['nombre'] }}</a>
+            </h2>
             <p>
                 <strong>Repositorio:</strong>
                 <a href="https://github.com/2DAW-CarlosIII/{{ $proyecto['dominio'] }}" class="text-blue-700 hover:underline">
