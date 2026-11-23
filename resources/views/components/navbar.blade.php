@@ -13,6 +13,11 @@
             'text-blue-700' => request()->routeIs('familias-profesionales.*'),
             'text-gray-600 hover:text-gray-900' => ! request()->routeIs('familias-profesionales.*'),
         ])>Familias Profesionales</a>
+        <a href="{{ route('ciclos-formativos.index') }}" @class([
+            'font-semibold',
+            'text-blue-700' => request()->routeIs('ciclos-formativos.*'),
+            'text-gray-600 hover:text-gray-900' => ! request()->routeIs('ciclos-formativos.*'),
+        ])>Ciclos Formativos</a>
         <a href="{{ route('perfil') }}" @class([
             'font-semibold',
             'text-blue-700' => request()->routeIs('perfil'),
