@@ -11,6 +11,7 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
  });
 
 require __DIR__ . '/proyectos.php';
+require __DIR__ . '/familias-profesionales.php';
 
 Route::get('perfil/{id?}', PerfilController::class)->whereNumber('id')->name('perfil');
 

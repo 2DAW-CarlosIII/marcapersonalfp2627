@@ -34,12 +34,12 @@
             </p>
 
             <div class="flex gap-3 pt-2">
-                <a href="{{ route('proyectos.edit', $id) }}" class="rounded bg-yellow-500 px-4 py-2 font-semibold text-white hover:bg-yellow-600">
-                    Editar proyecto
-                </a>
-                <a href="{{ route('proyectos.index') }}" class="rounded border px-4 py-2 hover:bg-gray-50">
+                <x-dopetrope.boton :href="route('proyectos.edit', $id)">
+                    Editar Proyecto
+                </x-dopetrope.boton>
+                <x-dopetrope.boton :href="route('proyectos.index')" alt>
                     Volver al listado
-                </a>
+                </x-dopetrope.boton>
             </div>
         </div>
     </li>

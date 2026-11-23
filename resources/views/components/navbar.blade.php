@@ -8,6 +8,11 @@
             'text-blue-700' => request()->routeIs('proyectos.*'),
             'text-gray-600 hover:text-gray-900' => ! request()->routeIs('proyectos.*'),
         ])>Proyectos</a>
+        <a href="{{ route('familias-profesionales.index') }}" @class([
+            'font-semibold',
+            'text-blue-700' => request()->routeIs('familias-profesionales.*'),
+            'text-gray-600 hover:text-gray-900' => ! request()->routeIs('familias-profesionales.*'),
+        ])>Familias Profesionales</a>
         <a href="{{ route('perfil') }}" @class([
             'font-semibold',
             'text-blue-700' => request()->routeIs('perfil'),
