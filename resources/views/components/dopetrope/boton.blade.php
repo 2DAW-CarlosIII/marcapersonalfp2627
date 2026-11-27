@@ -1,9 +1,17 @@
-@props(['href' => '#', 'alt' => false, 'grande' => false])
+@props(['href' => '#', 'alt' => false, 'grande' => false, 'type' => 'button'])
 
-<a href="{{ $href }}" @class([
+<button type="{{ $type }}" href="{{ $href }}" @class([
     'inline-flex items-center justify-center gap-2 rounded-[5px] font-bold text-white transition-colors',
     'px-6 py-2.5' => ! $grande,
     'min-w-[12em] px-9 py-4 text-2xl' => $grande,
     'bg-dope-red hover:bg-dope-red-hover' => ! $alt,
     'bg-dope-dark hover:bg-dope-dark-hover' => $alt,
-])>{{ $slot }}</a>
+])>
+    @if($type === 'submit')
+        {{ $slot }}
+    @else
+        <a href="{{ $href }}">
+            {{ $slot }}
+        </a>
+    @endisset
+</button>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\ProyectoRequest;
 use Illuminate\View\View;
 
 class ProyectoController extends Controller
@@ -130,6 +130,14 @@ class ProyectoController extends Controller
         return view('proyectos.create');
     }
 
+    public function store(ProyectoRequest $request)
+    {
+        $datos = $request->validated();
+        // ...
+        return redirect()->route('proyectos.index')
+            ->with('mensaje', "Proyecto «{$datos['nombre']}» creado.");
+    }
+
     public function edit(int $id): View
     {
         abort_unless(isset($this->arrayProyectos[$id]), 404);
@@ -138,5 +146,14 @@ class ProyectoController extends Controller
             'proyecto' => $this->arrayProyectos[$id],
             'id' => $id,
         ]);
+    }
+
+    public function update(ProyectoRequest $request, int $id)
+    {
+        abort_unless(isset($this->arrayProyectos[$id]), 404);
+        $datos = $request->validated();
+        // ...
+        return redirect()->route('proyectos.show', ['id' => $id])
+            ->with('mensaje', "Proyecto «{$datos['nombre']}» actualizado.");
     }
 }
